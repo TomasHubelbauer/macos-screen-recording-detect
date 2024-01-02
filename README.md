@@ -70,5 +70,11 @@ I haven't found it to contain super interesting information, however.
 
 ### Figure out how to start screen recording using the CLI
 
-This might be just `screencapture -v`.
-Might also be possible to control the destination file.
+I tried `screencapture -v file.mov` and got this error:
+
+```
+type any character (or ctrl-c) to stop screen recording
+screencapture: capture error The operation could not be completed
+```
+
+Maybe this could solve it? https://apple.stackexchange.com/a/465441/193285
