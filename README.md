@@ -55,6 +55,17 @@ might be possible to start a screen recording programatically.
 Only taking screenshots using the `screencapture` CLI is documented online.
 I have not found a way to start a screen recording using the CLI yet.
 
+## Extras
+
+There is also a binary PLIST used by `screencapture`.
+It can be viewed in a human-readable form like so:
+
+```
+plutil -convert xml1 -o - ~/Library/Preferences/com.apple.screencapture.plist
+```
+
+I haven't found it to contain super interesting information, however.
+
 ## To-Do
 
 ### Figure out how to start screen recording using the CLI
