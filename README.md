@@ -57,6 +57,30 @@ I have not found a way to start a screen recording using the CLI yet.
 
 ## Extras
 
+### Associating the temporary file with the final screen recording file
+
+The temporary recording file's name is a UUID.
+It doesn't have the date and time in the name so we can't use it to scan
+for the final file after the recording has finished.
+
+There are two ways to look at the file `Screen Recording …` files and
+see which one aligns with the UUID of the known temporary file name as
+it was captured while the screen recording was in progress:
+
+`stat -f %i "$HOME/Desktop/Screen Recording ….mov"`
+
+The `inode` number given by this will be the same as the `inode` number
+of the final recording, indicating the file is moved after the recording
+finishes.
+
+`mdls "$HOME/Desktop/Screen Recording ….mov"`
+
+The `_kMDItemDisplayNameWithExtensions`, `kMDItemDisplayName` and
+`kMDItemFSName` attributes reported by this utility all contain the file
+name of the temporary file (the UUID one).
+
+### `screencapture` PLIST
+
 There is also a binary PLIST used by `screencapture`.
 It can be viewed in a human-readable form like so:
 
