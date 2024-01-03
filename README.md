@@ -1,6 +1,6 @@
 # Detect Screen Recording in macOS
 
-macOS has a built-in screen recording feature (Cmd+Shift+4).
+macOS has a built-in screen recording feature (Cmd+Shift+5).
 When the screen recording ends, a new file is created in the Desktop directory.
 While the screen recording is ongoing, a temporary file exists in the
 `/Users/$USER/Library/ScreenRecordings/` (`~/Library`) directory.
